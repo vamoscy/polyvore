@@ -1,6 +1,8 @@
 FROM nvidia/cuda:8.0-cudnn5-devel
 
 # Pick up some TF dependencies
+RUN apt-get update && apt-get install -y --no-install-recommends apt-utils
+
 RUN apt-get update && apt-get install -y --no-install-recommends \
         build-essential \
         curl \
